@@ -23,7 +23,7 @@ function build
 {
 	configuration=$1
 	cd ${build_dir}
-	cmake -DCMAKE_BUILD_TYPE=${configuration^} ${project_dir}
+	cmake -DCMAKE_BUILD_TYPE=${configuration} ${project_dir}
 	make -j${number_of_cores}
 	ctest --output-on-failure
 }
